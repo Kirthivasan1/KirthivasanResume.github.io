@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+
+</head>
+<body id="body">
+  <div class="Navbar" id="navbar">
+    <h1> Mini Project</h1>
+    <nav>
+      <button onClick="changePage('home')">
+        <b>
+            Home
+        </b>
+    </button>
+    <button onClick="changePage('about')">
+        <b>
+            About
+        </b>
+    </button>
+    <button onClick="changePage('contact')">
+        <b>
+            Contact
+        </b>
+    </button>
+    </nav>
+          
+  </div>
+
+  <div class="introductionContainer">
+    <div class="logo">
+      <img src="logo.png" alt="logo">
+    </div>
+    <div class="Introduction">
+      Hello, I'm <span class="Kirthivasan"> Kirthivasan</span> <br> 
+      - I design and build <br> 
+      &nbsp;&nbsp;Application for web
+    </div>
+  </div>
+  <div class="Container">
+    <div class="Element">
+      <div class="project"><b>PROJECT</b></div>
+        <h3>
+          <span class="heading">
+            Online Mobile Shop    
+          </span>
+        </h3>
+        <p>A fully functional online mobile shop with cash or online modes of payment</p>
+        </a>
+      </div>
+    
+      <div class="Element">
+          <div class="project"><b>PROJECT</b></div>
+          <h3><span class="heading">Webpage</span></h3>
+          <p>Built an aesthetic front end webpage for an agrocommodities based company.</p>
+        </a>
+      </div>
+    
+      <div class="Element">
+        <a href="https://www.linkedin.com/in/kirthivasan-r-487abb250/" target="_blank" rel="noreferrer">
+          <div class="link"><b>LINK</b></div>
+          <h3><span class="heading">LinkedIn</span></h3>
+          <p>Boring Corporate Stuff</p>
+        </a>
+      </div>
+    
+      <div class="Element">
+        <a href="https://leetcode.com/Kirthivasan004/" target="_blank" rel="noreferrer">
+          <div class="link"><b>LINK</b></div>
+          <h3><span class="heading">LeetCode</span></h3>
+          <p>Just started recently so it's quite low.</p>
+        </a>
+      </div>
+</div>
+  <h2>My Service</h2>
+  
+      <div class="serviceContainer">
+        
+        <div class="servicesElement" id="DataScientist">
+          <div class="icon">
+            <i class="fa fa-500px" style="font-size:48px;color:#CED4DA"></i>
+        </div>
+        <div class="text">
+            <h3><span class="heading">Data Scientist</span></h3>
+            <p>Analytical data scientist, experienced in python and pandas, helpful in providing useful insights.</p>
+        </div>
+        </div>
+        
+        <div class="servicesElement" id="AppDevelopment">
+          <div class="icon">
+            <i class="fa fa-android" style="font-size: 48px;color:#CED4DA"></i>
+          </div>
+          <div class="text">
+            <h3><span class="heading">App Developmnt</span></h3>
+            <p>App developer creating seamless, user-friendly experiences.</p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceContainer">
+        <div class="servicesElement" id="VideoEditing">
+          <div class="icon">
+            <i class="fa fa-camera" style="font-size: 48px;color:#CED4DA"></i>
+          </div>
+          <div class="text">
+            <h3><span class="heading">Video Editing</span></h3>
+            <p>Video editor blending creativity and technical expertise to craft captivating visual stories.</p>
+          </div>
+        </div>
+        
+        <div class="servicesElement" id="Educator">
+          <div class="icon">
+            <i class='fa fa-book' style="font-size: 48px;color:#CED4DA"></i>
+          </div>
+          <div class="text">
+            <h3><span class="heading">Educator</span></h3>
+            <p>Educator helping you to explain complex concepts in a simple understandable manner.</p>
+          </div>
+        </div>
+      </div>
+      <div class="serviceContainer">
+        <div class="servicesElement">
+          <div class="icon">
+            <i class="fa fa-pencil" style="font-size: 48px;color:#CED4DA"></i>
+          </div>
+          <div class="text">
+            <h3>Animator</h3>
+            <p>Animator bringing your imagination into real life.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Use this place to add more services in the future. -->
+   <script>
+    let prevScrollPos = window.pageYOffset; // Previous scroll position
+        const navbar = document.getElementById('navbar');
+        const body = document.getElementById('body');
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            // Check scroll direction
+            if (prevScrollPos > currentScrollPos) {
+                // If scrolling up, show the navbar
+                navbar.classList.remove('hidden');
+                body.style.paddingTop="150px";
+            } else {
+                // If scrolling down, hide the navbar
+                navbar.classList.add('hidden');
+                body.style.paddingTop="60px";
+            }
+
+            prevScrollPos = currentScrollPos; // Update previous scroll position
+        };
+   </script>
+</body>
+</html>

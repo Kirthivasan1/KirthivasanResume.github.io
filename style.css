@@ -1,0 +1,470 @@
+/* FONT FOR WHOLE WEBPAGE */
+
+@import url('https://fonts.googleapis.com/css2?family=Sofia');    
+
+html {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-outline: 0;
+  font-family: "Sofia", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #000000;
+  }
+
+  
+
+/* NAVBAR STYLES */
+h1{
+  color:orange;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #000000;
+  transition: top 0.3s;
+  z-index: 1; 
+}
+b{
+  color: #FFFFFF;
+  font-size: 25px;
+}
+
+.hidden {
+  top: -100px; /* Move the navbar out of view */
+}
+
+body{
+    background-color: #212529;
+    color: white;
+    padding-top: 150px;
+    transition: all 0.3s ease; 
+    padding-bottom: 0px;
+  }
+button{
+    background-color: #343A40;
+    border-radius: 10px;
+    width: 100px;
+    font-family: "Sofia", sans-serif;
+    font-size: large;
+    color: #ADB5BD;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #495057; 
+}
+
+/* HOME PAGE STYLES */
+
+.logo{
+  width:50%;
+  height: fit-content;
+}
+
+.Kirthivasan{
+  color: #000000;
+  text-shadow: 0 0 5px orange, 0 0 15px orange, 0 0 20px orange, 0 0 10px orange;
+}
+
+.Introduction {
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.introductionContainer
+{
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+}
+
+
+
+.Element {
+    width: 25%;
+    padding: 10px;
+    margin: 20px;
+    border: 1px solid #FFFFFF;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color:#6C757D;
+  }
+
+  .Container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  .Element:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #FFFFFF; 
+  }
+  
+  .project {
+    color:#E9ECEF;
+    background-color: #000000; 
+    padding: 5px 10px; 
+    width: fit-content;
+  }
+  
+  
+  .link {
+    color: #E9ECEF;
+    background-color: #000000; 
+    padding: 5px 10px;
+    width: fit-content;
+  }
+  a{
+    text-decoration: none;
+    color:#6C757D;
+  }
+
+  /* ABOUT PAGE STYLES */
+
+  #AboutBody{
+    background-color: #000000;
+  }
+
+  .about-left{
+    font-size: 20px;
+    width: 75%;
+    background-color: #212529;
+    display: flex;
+    align-items: center;
+  }
+
+  .about-right{
+    background-color: #212529;
+  }
+
+  img{
+    width:50vh;
+  }
+  
+
+  .para{
+    padding-left: 10px;
+    color:#FFFFFF;
+    background-color: #202020;
+    margin-top: 0;
+  }
+
+  .biographyContainer{
+    width: 75%;
+  }
+
+  .biographyContainer h2{
+    color:orange;
+    border-radius: 10px;
+  }
+
+  .educationContainer{
+    width: 75%;
+    margin-left: 25%;
+    background-color: #202020;
+  }
+
+  .educationContainer h2{
+    border-radius: 10px;
+    color: orange;
+    
+  }
+
+  .skillsContainer{
+    width:75%;
+    background-color: #202020;
+  }
+
+  .skillsContainer h2{
+    border-radius: 10px;
+    color: orange ;
+  }
+  .skillsContainer p{
+    color:orange;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* MY SERVICE */
+
+  .serviceContainer{
+    display: flex;
+    text-align: right;
+    background-color: #495057;
+    justify-content: center;
+  }
+
+
+  h2{
+    background-color: #495057;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    margin: 0 0 0 0;
+    color: orange
+  }
+  .servicesElement {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Spacing between icon and text */
+    width:50%;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.servicesElement .icon {
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.servicesElement .text {
+    flex-grow: 1; /* Allow text to grow and take remaining space */
+}
+
+  div h3{
+    margin: 0;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+  }
+  div p{
+    padding: 1%;
+    color: #FFFFFF;
+  }
+
+  /* HEADINGS */
+
+  .heading{
+    color:orange;
+    font-size: 30px;
+  }
+
+  /* CONTACT PAGE */
+
+  
+.contact form {
+	width: 66%;
+	margin: 0px auto;
+}
+.contact input,
+textarea {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	border: 1px solid #a1a1a1;
+}
+.contact textarea {
+	height: 80px;
+}
+.contact button {
+	width: 100%;
+	float: left;
+	margin-bottom: 20px;
+	height: 40px;
+	padding: 10px;
+	background: #f5972d;
+	color: #fff;
+	border: none;
+	font-size: 16px;
+}
+.contact h3 {
+	font-size: 26px;
+	text-align: center;
+	margin-top: 60px;
+	color: #f5972d;
+}
+.contact h4 {
+	font-size: 22px;
+	text-align: center;
+	margin-top: 10px;
+}
+.contact p {
+	text-align: center;
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+.footer {
+	background-color: #202020;
+	padding: 30px 0px 40px 0px;
+	width: 100%;
+	float: left;
+}
+.footer-sect {
+	color: #b3b3b3;
+}
+.footer-sect a {
+	color: #b3b3b3;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+}
+
+.InputField{
+  width: 100%;
+  float: left;
+}
+
+.Infos{
+  width: 33%;
+  float: left;
+}
+
+/* SKILLS */
+
+.skillContainer{
+  width: 100%;
+	margin: 0px auto;
+	display: flex;
+}
+
+@keyframes progressingHTML {
+  from{
+    width:0%
+  }
+  to{
+    width: 95%;
+  }
+}
+
+@keyframes progressingCSS {
+  from{
+    width:0%
+  }
+  to{
+    width: 91%;
+  }
+}
+
+@keyframes progressingJAVASCRIPT {
+  from{
+    width:0%
+  }
+  to{
+    width: 85%;
+  }
+}
+
+@keyframes progressingREACTJS {
+  from{
+    width:0%
+  }
+  to{
+    width: 70%;
+  }
+}
+
+@keyframes progressingC {
+  from{
+    width:0%
+  }
+  to{
+    width: 85%;
+  }
+}
+
+@keyframes progressingPYTHON {
+  from{
+    width:0%
+  }
+  to{
+    width: 97%;
+  }
+}
+
+.container { 
+  background-color: rgb(192, 192, 192); 
+  width: 98%; 
+  border-radius: 15px; 
+  margin:5px
+} 
+
+.skill { 
+  background-color: #495057; 
+  color: white; 
+  padding: 1%; 
+  text-align: right; 
+  font-size: 20px; 
+  border-radius: 15px; 
+} 
+
+.html { 
+  width: 95%; 
+  animation: progressingHTML 2s ease-in-out;
+  color: orange;
+} 
+
+.css { 
+  width: 91%; 
+  animation: progressingCSS 2s ease-in-out;
+  color: orange;
+}
+
+.javascript{
+  width:85%;
+  animation: progressingJAVASCRIPT 2s ease-in-out;
+  color: orange;
+}
+
+.reactjs{
+  width: 70%;
+  animation: progressingREACTJS 2s ease-in-out;
+  color: orange;
+}
+
+.c{
+  width: 85%;
+  animation: progressingC 2s ease-in-out;
+  color: orange;
+}
+
+.python{
+  width: 97%;
+  animation: progressingPYTHON 2s ease-in-out;
+  color: orange;
+}
+
+.progressbar{
+  color: #f5972d;
+	margin-left: 100px;
+	margin-bottom: 20px;
+	width: 100px;
+	;
+	height: 100px;
+	;
+	border-radius: 50%;
+
+	place-items: center;
+	display: grid;
+
+	--pgPercentage: var(--value);
+	background: radial-gradient(closest-side, black 80%, transparent 0 99.9%, black 0),
+		conic-gradient(#f5972d calc(var(--pgPercentage) * 1%), #ffe6af 0);
+
+}
+
+/* INTERESTS */
+
+.interestContainer
+{
+  background-color: #212529;
+  height: 300px;
+  display: flex;
+}

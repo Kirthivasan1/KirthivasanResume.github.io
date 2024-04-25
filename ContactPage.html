@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactPage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+<body id="ContactBody">
+    <div class="Navbar" id="navbar">
+        <h1> Mini Project</h1>
+        <nav>
+          <button onClick="changePage('home')">
+            <b>
+                Home
+            </b>
+        </button>
+        <button onClick="changePage('about')">
+            <b>
+                About
+            </b>
+        </button>
+        <button onClick="changePage('contact')">
+            <b>
+                Contact
+            </b>
+        </button>
+        </nav>
+              
+      </div>
+    <div class="main-section contact">
+        
+          <h2 class="heading-text" id="contact">Contact</h2>
+          <div class="InputField">
+            <form id="contactForm" onsubmit="return validateForm()">
+              <input type="text" id="fullName" placeholder="Full Name..." required>
+              <input type="email" id="email" placeholder="Email Address..." required>
+              <input type="tel" id="phone" placeholder="Phone Number..." required>
+              <textarea id="address" placeholder="Enter Address..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+          <div class="Infos">
+            <h3>
+              <i class="fa fa-map-marker"></i>
+            </h3>
+            <h4>Address</h4>
+            <p>Dubai Main Road,Dubai Kuruku Sandhu,Dubai</p>
+          </div>
+          <div class="Infos">
+            <h3>
+              <i class="fa fa-phone"></i>
+            </h3>
+            <h4>Phone</h4>
+            <p>+91 xxxxxxxxxx</p>
+          </div>
+          <div class="Infos">
+            <h3>
+              <i class="fa fa-envelope-o"></i>
+            </h3>
+            <h4>Email</h4>
+            <p>KirthivasanR@gmail.in(Fake email)</p>
+          </div>
+        
+      </div>
+      <script>
+        function validateForm() {
+            // Get form inputs
+            var fullName = document.getElementById('fullName').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phone = document.getElementById('phone').value.trim();
+            var address = document.getElementById('address').value.trim();
+
+            // Regular expressions for validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phoneRegex = /^\d{10}$/;
+
+            // Simple validation
+            if (fullName === '' && email === '' && phone === '' && address === '') {
+                return true; // No content in the form, allow submission without confirmation
+            }
+
+            // Further validation
+            if (fullName === '') {
+                alert('Please enter your full name.');
+                return false;
+            }
+
+            if (email === '') {
+                alert('Please enter your email address.');
+                return false;
+            } else if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            if (phone === '') {
+                alert('Please enter your phone number.');
+                return false;
+            } else if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+
+            if (address === '') {
+                alert('Please enter your address.');
+                return false;
+            }
+
+            return true; // Form is valid, submit it
+        }
+
+        function formHasUnsavedData(form)
+        {
+        var inputs = form.querySelectorAll('myForm');
+        for (var i = 0; i < inputs.length; i++)
+        {
+        if (inputs[i].value.trim() !== '')
+        {
+        return true;
+        }
+        }
+        return false;
+        }
+
+        window.onunload = function()
+        {
+          var form = document.getElementById('myForm');
+          if (formHasUnsavedData(form)) {
+            return "You have unsaved data in the form. Are you sure you want to leave?";
+          }
+        };
+
+
+
+        
+let prevScrollPos = window.pageYOffset; // Previous scroll position
+        const navbar = document.getElementById('navbar');
+        const body = document.getElementById('ContactBody');
+        window.onscroll = function() {
+            const currentScrollPos = window.pageYOffset;
+            // Check scroll direction
+            if (prevScrollPos > currentScrollPos) {
+                // If scrolling up, show the navbar
+                navbar.classList.remove('hidden');
+                body.style.paddingTop="150px";
+            } else {
+                // If scrolling down, hide the navbar
+                navbar.classList.add('hidden');
+                body.style.paddingTop="60px";
+            }
+
+            prevScrollPos = currentScrollPos; // Update previous scroll position
+        };
+      </script>
+</body>
+</html>
