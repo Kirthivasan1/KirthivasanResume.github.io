@@ -9,7 +9,6 @@
 </head>
 <body id="AboutBody">
   <div class="Navbar" id="navbar">
-    <h1> Mini Project</h1>
     <nav>
       <button onClick="changePage('home')">
         <b>
@@ -102,28 +101,11 @@
     <div class="Element">
       <h3><span class="heading">MENTORING</span></h3>
       <p>I love to teach people as it makes me aware of how much I have understood the topic myself and just get happy whenever my pupils get in a good place just because of me. </p>
-  </div>
     </div>
-
-  <script>
-    let prevScrollPos = window.pageYOffset; // Previous scroll position
-    const navbar = document.getElementById('navbar');
-    const body = document.getElementById('AboutBody');
-    window.onscroll = function() {
-        const currentScrollPos = window.pageYOffset;
-        // Check scroll direction
-        if (prevScrollPos > currentScrollPos) {
-            // If scrolling up, show the navbar
-            navbar.classList.remove('hidden');
-            body.style.paddingTop="150px";
-        } else {
-            // If scrolling down, hide the navbar
-            navbar.classList.add('hidden');
-            body.style.paddingTop="60px";
-        }
-
-        prevScrollPos = currentScrollPos; // Update previous scroll position
-    };
-   </script>
+    <div class="Element">
+      <h3><span class="heading">CODING</span></h3>
+      <p>I like to solve leetocde problems and love to work on projects to enhance my understandings even more.  </p>
+    </div>
+    </div>
 </body>
 </html>
