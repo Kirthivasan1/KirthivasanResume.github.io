@@ -3,157 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactPage</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
 </head>
-<body id="ContactBody">
-    <div class="Navbar" id="navbar">
-        <h1> Mini Project</h1>
-        <nav>
-          <button onClick="changePage('home')">
-            <b>
-                Home
-            </b>
-        </button>
-        <button onClick="changePage('about')">
-            <b>
-                About
-            </b>
-        </button>
-        <button onClick="changePage('contact')">
-            <b>
-                Contact
-            </b>
-        </button>
-        </nav>
-              
+<body id="AboutBody">
+  <div class="Navbar" id="navbar">
+    <nav>
+      <button onClick="changePage('home')">
+        <b>
+            Home
+        </b>
+    </button>
+    <button onClick="changePage('about')">
+        <b>
+            About
+        </b>
+    </button>
+    <button onClick="changePage('contact')">
+        <b>
+            Contact
+        </b>
+    </button>
+    </nav>
+          
+  </div>
+  <div class="Container">  
+    <div class="about-left">
+      <h1>
+        Hi! 
+        <br>
+        My name is <span class="Kirthivasan">Kirthivasan!</span>
+      </h1>
+    </div>
+    <div class="about-right">
+      <img src="Kirthivasan.png" alt="Kirthivasan">
+    </div>
+  </div>
+  <div class="biographyContainer">
+    <h2>Biography</h2>
+    <p class="para">Hardworking student passionate to learning and driven by Discipline and Passion</p>
+  </div>
+  <div class="educationContainer">
+
+    <h2>Education</h2>
+    <p>
+      <ul class="para">
+        <li>Chettinad Vidyashram, Chennai (2010-2022)</li>
+        <li>Vellore Institute of Teachnology, Vellore (2022-present)</li>
+      </ul>
+    </p>
+  </div>
+  <div class="skillsContainer">
+    <h2>Skills</h2>
+    <p>HTML</p> 
+    <div class="container"> 
+      <div class="skill html">95%</div> 
+      
+    </div> 
+    
+    <p>CSS</p> 
+    <div class="container"> 
+      <div class="skill css">91%</div> 
+    </div> 
+    
+    <p>JavaScript</p>
+    <div class="container">
+      <div class="skill javascript">85%</div>
+    </div>
+    
+    <p>React JS</p>
+    <div class="container">
+      <div class="skill reactjs">70%</div>
+    </div>
+    
+    <p>C/C++</p>
+    <div class="container">
+      <div class="skill c">85%</div>
+    </div>
+    
+    <p>Python</p>
+    <div class="container">
+      <div class="skill python">97%</div>
+    </div>
+  </div>
+    <br>
+    <h2>Interests</h2>
+    <div class="interestContainer">
+      <div class="Element">
+          <h3><span class="heading">READING</span></h3>
+          <p>I like to read both fictional as well as non fictional(preferable) as it provides me with more knowledge which can help me personally.</p>
       </div>
-    <div class="main-section contact">
-        
-          <h2 class="heading-text" id="contact">Contact</h2>
-          <div class="InputField">
-            <form id="contactForm" onsubmit="return validateForm()">
-              <input type="text" id="fullName" placeholder="Full Name..." required>
-              <input type="email" id="email" placeholder="Email Address..." required>
-              <input type="tel" id="phone" placeholder="Phone Number..." required>
-              <textarea id="address" placeholder="Enter Address..."></textarea>
-              <button type="submit">Submit</button>
-            </form>
-          </div>
-          <div class="Infos">
-            <h3>
-              <i class="fa fa-map-marker"></i>
-            </h3>
-            <h4>Address</h4>
-            <p>Dubai Main Road,Dubai Kuruku Sandhu,Dubai</p>
-          </div>
-          <div class="Infos">
-            <h3>
-              <i class="fa fa-phone"></i>
-            </h3>
-            <h4>Phone</h4>
-            <p>+91 xxxxxxxxxx</p>
-          </div>
-          <div class="Infos">
-            <h3>
-              <i class="fa fa-envelope-o"></i>
-            </h3>
-            <h4>Email</h4>
-            <p>KirthivasanR@gmail.in(Fake email)</p>
-          </div>
-        
-      </div>
-      <script>
-        function validateForm() {
-            // Get form inputs
-            var fullName = document.getElementById('fullName').value.trim();
-            var email = document.getElementById('email').value.trim();
-            var phone = document.getElementById('phone').value.trim();
-            var address = document.getElementById('address').value.trim();
-
-            // Regular expressions for validation
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            var phoneRegex = /^\d{10}$/;
-
-            // Simple validation
-            if (fullName === '' && email === '' && phone === '' && address === '') {
-                return true; // No content in the form, allow submission without confirmation
-            }
-
-            // Further validation
-            if (fullName === '') {
-                alert('Please enter your full name.');
-                return false;
-            }
-
-            if (email === '') {
-                alert('Please enter your email address.');
-                return false;
-            } else if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            if (phone === '') {
-                alert('Please enter your phone number.');
-                return false;
-            } else if (!phoneRegex.test(phone)) {
-                alert('Please enter a valid 10-digit phone number.');
-                return false;
-            }
-
-            if (address === '') {
-                alert('Please enter your address.');
-                return false;
-            }
-
-            return true; // Form is valid, submit it
-        }
-
-        function formHasUnsavedData(form)
-        {
-        var inputs = form.querySelectorAll('myForm');
-        for (var i = 0; i < inputs.length; i++)
-        {
-        if (inputs[i].value.trim() !== '')
-        {
-        return true;
-        }
-        }
-        return false;
-        }
-
-        window.onunload = function()
-        {
-          var form = document.getElementById('myForm');
-          if (formHasUnsavedData(form)) {
-            return "You have unsaved data in the form. Are you sure you want to leave?";
-          }
-        };
-
-
-
-        
-let prevScrollPos = window.pageYOffset; // Previous scroll position
-        const navbar = document.getElementById('navbar');
-        const body = document.getElementById('ContactBody');
-        window.onscroll = function() {
-            const currentScrollPos = window.pageYOffset;
-            // Check scroll direction
-            if (prevScrollPos > currentScrollPos) {
-                // If scrolling up, show the navbar
-                navbar.classList.remove('hidden');
-                body.style.paddingTop="150px";
-            } else {
-                // If scrolling down, hide the navbar
-                navbar.classList.add('hidden');
-                body.style.paddingTop="60px";
-            }
-
-            prevScrollPos = currentScrollPos; // Update previous scroll position
-        };
-      </script>
+      <div class="Element">
+        <h3><span class="heading">GYM</span></h3>
+        <p>I am addicted to gym as it brings happiness and peace to my body as well as mind. I also want to be fit and healthy at an older age ofcourse.</p>
+    </div>
+    <div class="Element">
+      <h3><span class="heading">MENTORING</span></h3>
+      <p>I love to teach people as it makes me aware of how much I have understood the topic myself and just get happy whenever my pupils get in a good place just because of me. </p>
+    </div>
+    <div class="Element">
+      <h3><span class="heading">CODING</span></h3>
+      <p>I like to solve leetocde problems and love to work on projects to enhance my understandings even more.  </p>
+    </div>
+    </div>
 </body>
 </html>
